@@ -5,7 +5,15 @@ body {
     color: rgb(60, 5, 148);
     text-align: center;
   }
+  h2 {
+    font-family: "Papyrus";
+    font-size: 18px;
+  }
   p {
+    font-family: "Papyrus";
+    font-size: 15px;
+  }
+  li {
     font-family: "Papyrus";
     font-size: 15px;
   }
