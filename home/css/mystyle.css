@@ -1,22 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(240, 248, 255);
 }
+
 h1 {
   color: rgb(54, 69, 79);
   text-align: center;
 }
+
 h2 {
   font-family: "Times New Roman";
   font-size: 18px;
   color: rgb(70, 130, 180);
 }
-p {
-  font-family: "Times New Roman";
-  font-size: 15px;
-  color: rgb(47, 79, 79);
-}
+
+p,
 li {
   font-family: "Times New Roman";
   font-size: 15px;
   color: rgb(47, 79, 79);
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+.header {
+  background-color: rgb(240, 248, 255);
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(54, 69, 79);
+}
+
+.footer {
+  background-color: rgb(240, 248, 255);
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: rgb(47, 79, 79);
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-content {
+  flex: 2;
+  background-color: rgb(240, 248, 255);
+  padding: 20px;
+}
+
+.main-content > div {
+  margin-bottom: 20px;
+}
+
+.main-content h2 {
+  margin-bottom: 10px;
+}
+
+.main-content p,
+.main-content ul {
+  line-height: 1.6;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: rgb(240, 248, 255);
+  padding: 20px;
+  border-left: 2px solid #ddd;
+  text-align: center;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+}
+
+.sidebar p {
+  margin-bottom: 15px;
+}
+
+.sidebar img {
+  display: block;
+  margin: 10px auto;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  width: 150px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar img:hover {
+  transform: scale(1.1);
+  border-color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    border-left: none;
+    border-top: 2px solid #ddd;
+  }
+}
+
+.button {
+  background-color: rgb(70, 130, 180);
+  color: white;
+  font-family: "Times New Roman";
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: rgb(54, 69, 79);
+  transform: scale(1.1);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgb(70, 130, 180);
 }
