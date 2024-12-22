@@ -1,20 +1,22 @@
 body {
-    background-color: rgb(162, 92, 223);
-  }
-  h1 {
-    color: rgb(60, 5, 148);
-    text-align: center;
-  }
-  h2 {
-    font-family: "Times New Roman";
-    font-size: 18px;
-  }
-  p {
-    font-family: "Times New Roman";
-    font-size: 15px;
-  }
-  li {
-    font-family: "Times New Roman";
-    font-size: 15px;
-  }
-  
+  background-color: rgb(240, 248, 255);
+}
+h1 {
+  color: rgb(54, 69, 79);
+  text-align: center;
+}
+h2 {
+  font-family: "Times New Roman";
+  font-size: 18px;
+  color: rgb(70, 130, 180);
+}
+p {
+  font-family: "Times New Roman";
+  font-size: 15px;
+  color: rgb(47, 79, 79);
+}
+li {
+  font-family: "Times New Roman";
+  font-size: 15px;
+  color: rgb(47, 79, 79);
+}
