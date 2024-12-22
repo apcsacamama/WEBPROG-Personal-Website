@@ -5,57 +5,62 @@
 }
 
 body {
-  font-family: "Times New Roman", serif;
   background-color: rgb(240, 248, 255);
+}
+
+h1 {
+  color: rgb(54, 69, 79); 
+  text-align: center;
+}
+
+h2 {
+  font-family: "Times New Roman";
+  font-size: 18px;
+  color: rgb(70, 130, 180); 
+}
+
+p, li {
+  font-family: "Times New Roman";
+  font-size: 15px;
+  color: rgb(47, 79, 79); 
 }
 
 .container {
-  display: grid;
-  grid-template-rows: auto 1fr;
+  display: flex;
+  flex-direction: row;
   height: 100vh;
 }
 
-.header {
-  background-color: rgb(240, 248, 255);
-  text-align: center;
-  padding: 20px;
-}
-
-.main {
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
 .main-content {
-  flex: 3;
-  margin-right: 20px;
+  flex: 2;
+  padding: 20px;
+  background-color: rgb(240, 248, 255);
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
 }
 
-.main-content h2 {
-  margin-bottom: 10px;
-  color: rgb(70, 130, 180);
-}
-
-.main-content p, .main-content ul {
-  color: rgb(47, 79, 79);
+.main-content > div {
   margin-bottom: 20px;
 }
 
 .sidebar {
   flex: 1;
   background-color: rgb(240, 248, 255);
-  border-left: 2px solid #ddd;
   padding: 20px;
-  text-align: center;
+  border-left: 2px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 15px;
 }
 
 .sidebar img {
   display: block;
   margin: 10px auto;
-  width: 150px;
-  border-radius: 10px;
   border: 2px solid #ddd;
+  border-radius: 10px;
+  width: 150px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -64,19 +69,8 @@ body {
   border-color: #aaa;
 }
 
-@media (max-width: 768px) {
-  .main {
-      flex-direction: column;
-  }
-
-  .sidebar {
-      border-left: none;
-      border-top: 2px solid #ddd;
-  }
-}
-
-.button {
-  background-color: rgb(70, 130, 180);
+.cute-button {
+  background-color: rgb(70, 130, 180); 
   color: white;
   font-family: "Times New Roman";
   font-size: 16px;
@@ -84,16 +78,28 @@ body {
   border-radius: 25px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   transition: all 0.3s ease;
 }
 
-.button:hover {
-  background-color: rgb(54, 69, 79);
+.cute-button:hover {
+  background-color: rgb(54, 69, 79); 
   transform: scale(1.1);
 }
 
-.button:focus {
+.cute-button:focus {
   outline: none;
   box-shadow: 0 0 10px rgb(70, 130, 180);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    border-left: none;
+    border-top: 2px solid #ddd;
+  }
 }
