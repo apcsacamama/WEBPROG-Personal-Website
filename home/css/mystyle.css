@@ -4,57 +4,71 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: rgb(240, 248, 255);
-}
-
-h1 {
-  color: rgb(54, 69, 79);
-  text-align: center;
-}
-
-h2 {
-  font-family: "Times New Roman";
-  font-size: 18px;
-  color: rgb(70, 130, 180);
-  margin-bottom: 10px;
-}
-
-p, li {
-  font-family: "Times New Roman";
-  font-size: 15px;
-  color: rgb(47, 79, 79);
-  margin-bottom: 10px;
-}
-
 .container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   height: 100vh;
 }
 
-.main-content {
-  flex: 3;
-  padding: 20px;
+
+.header {
   background-color: rgb(240, 248, 255);
+  color: rgb(54, 69, 79);
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  
+}
+
+.main {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: row;
+}
+
+
+.main-content {
+  flex: 2;
+  background-color: #f9f9f9;
+  padding: 20px;
 }
 
 .main-content > div {
   margin-bottom: 20px;
 }
 
+.main-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: rgb(70, 130, 180);
+}
+
+.main-content p,
+.main-content ul {
+  font-size: 1rem;
+  color: rgb(47, 79, 79);
+  line-height: 1.6;
+}
+
+
 .sidebar {
   flex: 1;
-  background-color: rgb(240, 248, 255);
+  background-color: #f5f5f5;
   padding: 20px;
   border-left: 2px solid #ddd;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  text-align: center;
+}
+
+.sidebar h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.sidebar p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
 }
 
 .sidebar img {
@@ -70,12 +84,6 @@ p, li {
   transform: scale(1.1);
   border-color: #aaa;
 }
-
-.sidebar h2 {
-  margin-bottom: 20px;
-  color: rgb(70, 130, 180);
-}
-
 .button {
   background-color: rgb(70, 130, 180);
   color: white;
@@ -99,14 +107,13 @@ p, li {
   box-shadow: 0 0 10px rgb(70, 130, 180);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
+  .main {
+      flex-direction: column;
   }
 
   .sidebar {
-    border-left: none;
-    border-top: 2px solid #ddd;
+      border-left: none;
+      border-top: 2px solid #ddd;
   }
 }
