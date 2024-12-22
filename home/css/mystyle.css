@@ -84,12 +84,18 @@
   transform: scale(1.1);
   border-color: #aaa;
 }
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
 .button {
   background-color: rgb(70, 130, 180);
   color: white;
+  display: inline-block;
   font-family: "Times New Roman";
-  font-size: 16px;
-  padding: 12px 24px;
+  font-size: 14px;
+  padding: 10px 20px;
   border-radius: 25px;
   border: none;
   cursor: pointer;
