@@ -14,7 +14,5 @@ function addButton() {
 
     button.onclick = () => {
         window.location.href = 'https://frankie-socmeds.carrd.co/';
-    };
-
-    document.getElementById('demo').appendChild(button);
+    }
 }
