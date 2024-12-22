@@ -5,96 +5,57 @@
 }
 
 body {
+  font-family: "Times New Roman", serif;
   background-color: rgb(240, 248, 255);
-}
-
-h1 {
-  color: rgb(54, 69, 79);
-  text-align: center;
-}
-
-h2 {
-  font-family: "Times New Roman";
-  font-size: 18px;
-  color: rgb(70, 130, 180);
-}
-
-p,
-li {
-  font-family: "Times New Roman";
-  font-size: 15px;
-  color: rgb(47, 79, 79);
 }
 
 .container {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr;
   height: 100vh;
 }
 
 .header {
   background-color: rgb(240, 248, 255);
+  text-align: center;
   padding: 20px;
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: rgb(54, 69, 79);
-}
-
-.footer {
-  background-color: rgb(240, 248, 255);
-  text-align: center;
-  padding: 10px;
-  font-size: 0.9rem;
-  color: rgb(47, 79, 79);
 }
 
 .main {
   display: flex;
   flex-direction: row;
-}
-
-.main-content {
-  flex: 2;
-  background-color: rgb(240, 248, 255);
   padding: 20px;
 }
 
-.main-content > div {
-  margin-bottom: 20px;
+.main-content {
+  flex: 3;
+  margin-right: 20px;
 }
 
 .main-content h2 {
   margin-bottom: 10px;
+  color: rgb(70, 130, 180);
 }
 
-.main-content p,
-.main-content ul {
-  line-height: 1.6;
+.main-content p, .main-content ul {
+  color: rgb(47, 79, 79);
+  margin-bottom: 20px;
 }
 
 .sidebar {
   flex: 1;
   background-color: rgb(240, 248, 255);
-  padding: 20px;
   border-left: 2px solid #ddd;
+  padding: 20px;
   text-align: center;
-}
-
-.sidebar h2 {
-  margin-bottom: 15px;
-}
-
-.sidebar p {
-  margin-bottom: 15px;
 }
 
 .sidebar img {
   display: block;
   margin: 10px auto;
-  border: 2px solid #ddd;
-  border-radius: 10px;
   width: 150px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -103,15 +64,14 @@ li {
   border-color: #aaa;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .main {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   .sidebar {
-    border-left: none;
-    border-top: 2px solid #ddd;
+      border-left: none;
+      border-top: 2px solid #ddd;
   }
 }
 
