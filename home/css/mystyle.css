@@ -10,15 +10,33 @@
   height: 100vh;
 }
 
-
 .header {
-  background-color: rgb(240, 248, 255);
-  color: rgb(54, 69, 79);
+  background-color: #FFD3B5;
+  color: #5D5C61;
   padding: 20px;
   text-align: center;
   font-size: 1.8rem;
   font-weight: bold;
-  
+}
+
+.nav {
+  background-color: #FFAAA5;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.nav a {
+  color: #5D5C61;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #F8B195;
+  text-decoration: underline;
 }
 
 .main {
@@ -26,10 +44,9 @@
   flex-direction: row;
 }
 
-
 .main-content {
   flex: 2;
-  background-color: #f9f9f9;
+  background-color: #FFEEAD;
   padding: 20px;
 }
 
@@ -40,19 +57,19 @@
 .main-content h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: rgb(70, 130, 180);
+  color: #5D5C61;
 }
 
 .main-content p,
 .main-content ul {
   font-size: 1rem;
-  color: rgb(47, 79, 79);
+  color: #5D5C61;
   line-height: 1.6;
 }
 
 .button {
-  background-color: rgb(70, 130, 180);
-  color: white;
+  background-color: #B5EAD7;
+  color: #5D5C61;
   display: inline-block;
   font-family: "Times New Roman";
   font-size: 14px;
@@ -65,39 +82,39 @@
 }
 
 .button:hover {
-  background-color: rgb(54, 69, 79); 
+  background-color: #FFB7B2;
   transform: scale(1.1);
 }
 
 .button:focus {
   outline: none;
-  box-shadow: 0 0 10px rgb(70, 130, 180);
+  box-shadow: 0 0 10px #B5EAD7;
 }
 
 .sidebar {
   flex: 1;
-  background-color: #f5f5f5;
+  background-color: #D4A5A5;
   padding: 20px;
-  border-left: 2px solid #ddd;
+  border-left: 2px solid #FFAAA5;
   text-align: center;
 }
 
 .sidebar h2 {
   font-size: 1.3rem;
   margin-bottom: 15px;
-  color: #333;
+  color: #5D5C61;
 }
 
 .sidebar p {
   font-size: 1rem;
   margin-bottom: 15px;
-  color: #555;
+  color: #5D5C61;
 }
 
 .sidebar img {
   display: block;
   margin: 10px auto;
-  border: 2px solid #ddd;
+  border: 2px solid #FFAAA5;
   border-radius: 10px;
   width: 150px;
   transition: transform 0.3s ease-in-out;
@@ -105,20 +122,24 @@
 
 .sidebar img:hover {
   transform: scale(1.1);
-  border-color: #aaa;
+  border-color: #F8B195;
 }
-.button-container {
+
+.footer {
+  background-color: #BEE7E9;
+  color: #5D5C61;
   text-align: center;
-  margin-top: 20px;
+  padding: 15px;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
   .main {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .sidebar {
-      border-left: none;
-      border-top: 2px solid #ddd;
+    border-left: none;
+    border-top: 2px solid #FFAAA5;
   }
 }
