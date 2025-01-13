@@ -1,38 +1,53 @@
+HTML
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal profile webpage of Shanteiy A. Camama.">
+    <meta name="keywords" content="Personal Profile, IT Student, Portfolio">
+    <meta name="author" content="Shanteiy A. Camama">
     <title>My Personal Profile</title>
     <link rel="stylesheet" href="css/mystyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
 </head>
 <body>
     <div class="container">
         <header class="header">
             <h1>My Personal Profile Webpage</h1>
         </header>
+
+        <nav class="nav">
+            <a href="#about">About Me</a>
+            <a href="#education">Education</a>
+            <a href="#course">Course</a>
+            <a href="#experience">IT Experience</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#goals">Goals</a>
+        </nav>
+
         <main class="main">
-            
             <section class="main-content">
-                
-                <div class="about">
+                <div id="about" class="about">
                     <h2>About Me</h2>
                     <p>Hello! My name is Shanteiy A. Camama, but you can also call me Shan. I am currently in 2nd year of college, and here are some of the things about me.</p>
                 </div>
-                
-                <div class="education">
+
+                <div id="education" class="education">
                     <h2>Education / Achievements</h2>
                     <ul>
                         <li>2022-2023: 1st Place in MathemArtists Art Making Competition, Grade 12 with honors</li>
                         <li>2023-2024: 1st-year Honor student</li>
                     </ul>
                 </div>
-                
-                <div class="course">
+
+                <div id="course" class="course">
                     <h2>Course</h2>
                     <p>Bachelor of Science in Computer Science Specializing in Software Systems.</p>
                 </div>
-                
-                <div class="it-experience">
+
+                <div id="experience" class="it-experience">
                     <h2>IT Experience</h2>
                     <p>I have worked on various IT projects, including:</p>
                     <ul>
@@ -40,10 +55,9 @@
                         <li>Database management</li>
                     </ul>
                 </div>
-                
-                <div class="hobbies">
+
+                <div id="hobbies" class="hobbies">
                     <h2>Hobbies & Interests</h2>
-                    <p>Here are some of my hobbies:</p>
                     <ul>
                         <li>Reading manhwas and manga</li>
                         <li>Playing instruments like the ukulele and keyboard</li>
@@ -51,26 +65,36 @@
                         <li>Traveling</li>
                     </ul>
                 </div>
-                
-                <div class="goals">
+
+                <div id="goals" class="goals">
                     <h2>Goals in Life / Dream</h2>
                     <p>My dream is to become a successful software developer like my sister and be able to travel around the world once I'm financially stable.</p>
                 </div>
-                <button class="button" onclick="redirectToSocials()">My Socials</button>
-                <script 
-            location.reload();
-            src="js/myScript.js">
-            </script>
+                <div class="button-container">
+                    <button class="button" onclick="redirectToSocials()">My Socials</button>
+                </div>
             </section>
+
             <aside class="sidebar">
                 <h2>Picture Gallery</h2>
                 <p>Here are some pictures that represent me:</p>
-                <img src="https://i.pinimg.com/474x/ee/2a/71/ee2a7149341c2b23ae2e9c7358ec247d.jpg" alt="Placeholder Image 1" width="150">
-                <img src="https://i.pinimg.com/736x/ac/e3/16/ace3163f3edb4b0c311ea0e56bb9d5d1.jpg" alt="Placeholder Image 2" width="150">
-                <img src="https://i.pinimg.com/736x/bb/e9/85/bbe985b0966c8cd51df295e6389e080c.jpg" alt="Placeholder Image 3" width="150">
-                <img src="https://i.pinimg.com/736x/06/ad/da/06adda610b5c8af46f61afa7779760a0.jpg" alt="Placeholder Image 4" width="150">
+                <div id="gallery">
+                    <div v-for="image in images" :key="image" class="gallery-item">
+                        <img :src="image" alt="Gallery image" />
+                    </div>
+                </div>
             </aside>
         </main>
+
+        <footer class="footer">
+            <p>© 2025 Shanteiy A. Camama | <a href="#credits">Credits</a></p>
+        </footer>
+
+        <section id="credits" class="credits">
+            <h2>Credits</h2>
+            <p>Image sources: Pinterest. Gallery and design suggestions: ChatGPT.</p>
+        </section>
     </div>
+    <script src="js/myScript.js"></script>
 </body>
 </html>
