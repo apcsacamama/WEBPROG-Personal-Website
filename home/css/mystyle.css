@@ -209,3 +209,23 @@
     margin-top: 20px;
   }
 }
+
+.credits-page h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #2C3E50;
+}
+
+.credits-page p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.credits-page ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.credits-page ul li {
+    margin-bottom: 10px;
+}
