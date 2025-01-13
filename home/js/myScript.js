@@ -13,7 +13,8 @@ createApp({
                 "https://i.pinimg.com/736x/ac/e3/16/ace3163f3edb4b0c311ea0e56bb9d5d1.jpg",
                 "https://i.pinimg.com/736x/bb/e9/85/bbe985b0966c8cd51df295e6389e080c.jpg",
                 "https://i.pinimg.com/736x/06/ad/da/06adda610b5c8af46f61afa7779760a0.jpg"
-            ]
+            ],
+            currentImageIndex: 0
         };
     },
     methods: {
@@ -26,6 +27,22 @@ createApp({
                 this.newComment.name = '';
                 this.newComment.message = '';
             }
+        },
+       
+        prevImage() {
+            if (this.currentImageIndex === 0) {
+                this.currentImageIndex = this.images.length - 1;
+            } else {
+                this.currentImageIndex--;
+            }
+        },
+        
+        nextImage() {
+            if (this.currentImageIndex === this.images.length - 1) {
+                this.currentImageIndex = 0;
+            } else {
+                this.currentImageIndex++;
+            }
         }
     }
 }).mount('#app');
@@ -33,4 +50,3 @@ createApp({
 function redirectToSocials() {
     window.location.href = "https://frankie-socmeds.carrd.co/";
 }
-
