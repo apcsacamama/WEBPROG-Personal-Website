@@ -46,6 +46,7 @@
 .main {
   display: flex;
   flex-direction: row;
+  width: 100%; /* Make sure the main container uses full width */
 }
 
 .main-content {
@@ -100,10 +101,10 @@
 
 /* Sidebar */
 .sidebar {
-  flex: 1;
-  background-color: #BEE7E9; /* Soft Pastel Blue */
+  flex: 1; /* Fill the remaining space */
+  background-color: #B8E1ED;
   padding: 20px;
-  border-left: 3px solid #9AD3DE; 
+  margin: 0; /* Ensure no margins are restricting width */
   text-align: center;
 }
 
@@ -117,14 +118,6 @@
   font-size: 1rem;
   margin-bottom: 15px;
   color: #2C3E50;
-}
-
-.sidebar {
-  flex: 1;
-  background-color: #B8E1ED;
-  padding: 20px;
-  margin: 0;
-  text-align: center;
 }
 
 .sidebar #gallery {
