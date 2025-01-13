@@ -4,14 +4,18 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 .container {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  height: 100vh;
+  height: 100%;
 }
 
 .header {
-  background-color: #B3DFF2; 
+  background-color: #B3DFF2;
   color: #4F6470;
   padding: 20px;
   text-align: center;
@@ -42,7 +46,7 @@
 .main {
   display: flex;
   flex-direction: row;
-  margin: 0; /* Removed horizontal margins */
+  width: 100%;
 }
 
 .main-content {
@@ -108,7 +112,7 @@
 .sidebar p {
   font-size: 1rem;
   margin-bottom: 15px;
-  color: #4F6470; 
+  color: #4F6470;
 }
 
 .sidebar img {
@@ -128,7 +132,6 @@
   margin: 20px auto;
   padding: 20px;
   background-color: #EFF8FC;
-  /* Removed border */
   border-radius: 5px;
 }
 
@@ -194,7 +197,6 @@
   }
 
   .sidebar {
-    margin-left: 0;
     margin-top: 20px;
   }
 }
