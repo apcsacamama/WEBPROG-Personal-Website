@@ -11,8 +11,8 @@
 }
 
 .header {
-  background-color: #FFD3B5;
-  color: #5D5C61;
+  background-color: #A7C7E7;
+  color: #3A3A3A;
   padding: 20px;
   text-align: center;
   font-size: 1.8rem;
@@ -20,14 +20,14 @@
 }
 
 .nav {
-  background-color: #FFAAA5;
+  background-color: #8FBCE7;
   display: flex;
   justify-content: center;
   padding: 10px 0;
 }
 
 .nav a {
-  color: #5D5C61;
+  color: #3A3A3A;
   text-decoration: none;
   font-size: 1.2rem;
   margin: 0 15px;
@@ -35,7 +35,7 @@
 }
 
 .nav a:hover {
-  color: #F8B195;
+  color: #729FCF;
   text-decoration: underline;
 }
 
@@ -46,7 +46,7 @@
 
 .main-content {
   flex: 2;
-  background-color: #FFEEAD;
+  background-color: #D8E6F3;
   padding: 20px;
 }
 
@@ -57,19 +57,19 @@
 .main-content h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #5D5C61;
+  color: #3A3A3A;
 }
 
 .main-content p,
 .main-content ul {
   font-size: 1rem;
-  color: #5D5C61;
+  color: #3A3A3A;
   line-height: 1.6;
 }
 
 .button {
-  background-color: #B5EAD7;
-  color: #5D5C61;
+  background-color: #A7D3F2;
+  color: #3A3A3A;
   display: inline-block;
   font-family: "Times New Roman";
   font-size: 14px;
@@ -82,39 +82,39 @@
 }
 
 .button:hover {
-  background-color: #FFB7B2;
+  background-color: #91C3E6;
   transform: scale(1.1);
 }
 
 .button:focus {
   outline: none;
-  box-shadow: 0 0 10px #B5EAD7;
+  box-shadow: 0 0 10px #A7D3F2;
 }
 
 .sidebar {
   flex: 1;
-  background-color: #D4A5A5;
+  background-color: #C3DBF4;
   padding: 20px;
-  border-left: 2px solid #FFAAA5;
+  border-left: 2px solid #8FBCE7;
   text-align: center;
 }
 
 .sidebar h2 {
   font-size: 1.3rem;
   margin-bottom: 15px;
-  color: #5D5C61;
+  color: #3A3A3A;
 }
 
 .sidebar p {
   font-size: 1rem;
   margin-bottom: 15px;
-  color: #5D5C61;
+  color: #3A3A3A;
 }
 
 .sidebar img {
   display: block;
   margin: 10px auto;
-  border: 2px solid #FFAAA5;
+  border: 2px solid #8FBCE7;
   border-radius: 10px;
   width: 150px;
   transition: transform 0.3s ease-in-out;
@@ -122,12 +122,12 @@
 
 .sidebar img:hover {
   transform: scale(1.1);
-  border-color: #F8B195;
+  border-color: #729FCF;
 }
 
 .footer {
-  background-color: #BEE7E9;
-  color: #5D5C61;
+  background-color: #B2D6F5;
+  color: #3A3A3A;
   text-align: center;
   padding: 15px;
   font-size: 0.9rem;
@@ -140,6 +140,6 @@
 
   .sidebar {
     border-left: none;
-    border-top: 2px solid #FFAAA5;
+    border-top: 2px solid #8FBCE7;
   }
 }
