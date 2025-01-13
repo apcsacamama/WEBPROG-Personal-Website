@@ -211,15 +211,3 @@ body, html {
   grid-template-rows: auto 1fr auto;
   height: 100vh;
 }
-
-.main, .sidebar, .header, .footer {
-  background: repeating-linear-gradient(45deg, #FFC0CB, #FFC0CB 10px, #B0E57C 10px, #B0E57C 20px); /* Debug colors */
-}
-
-.main {
-  background-color: lightblue;
-}
-
-.sidebar {
-  background-color: lightcoral;
-}
