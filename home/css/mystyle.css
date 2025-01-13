@@ -51,6 +51,8 @@
   margin: 10px;
   border: 1px solid #A7CCE1;
   border-radius: 5px;
+  /* Added box-sizing for consistency */
+  box-sizing: border-box;
 }
 
 .main-content > div {
@@ -102,6 +104,8 @@
   border-left: 2px solid #A7CCE1;
   text-align: center;
   border-radius: 5px;
+  /* Ensure padding doesn't affect layout */
+  box-sizing: border-box;
 }
 
 .sidebar h2 {
@@ -136,6 +140,8 @@
   background-color: #EFF8FC;
   border: 1px solid #A7CCE1;
   border-radius: 5px;
+  /* Added box-sizing for consistency */
+  box-sizing: border-box;
 }
 
 .comments-section h2 {
