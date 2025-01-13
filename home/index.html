@@ -69,6 +69,28 @@
                         <h2>Goals in Life / Dream</h2>
                         <p>My dream is to become a successful software developer like my sister and travel around the world once I'm financially stable.</p>
                     </div>
+
+                    <div id="comments-section" class="comments-section">
+                        <h2>Leave a Comment</h2>
+                        <form @submit.prevent="addComment">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" v-model="newComment.name" required>
+
+                            <label for="message">Message:</label>
+                            <textarea id="message" v-model="newComment.message" required></textarea>
+
+                            <button type="submit" class="button">Submit</button>
+                        </form>
+
+                        <div class="comments-list">
+                            <h2>Comments</h2>
+                            <div v-if="comments.length === 0">No comments yet. Be the first to comment!</div>
+                            <div v-for="(comment, index) in comments" :key="index" class="comment">
+                                <h3>{{ comment.name }}</h3>
+                                <p>{{ comment.message }}</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <aside class="sidebar">
@@ -99,6 +121,11 @@
         createApp({
             data() {
                 return {
+                    newComment: {
+                        name: '',
+                        message: ''
+                    },
+                    comments: [],
                     images: [
                         "https://i.pinimg.com/474x/ee/2a/71/ee2a7149341c2b23ae2e9c7358ec247d.jpg",
                         "https://i.pinimg.com/736x/ac/e3/16/ace3163f3edb4b0c311ea0e56bb9d5d1.jpg",
@@ -106,6 +133,18 @@
                         "https://i.pinimg.com/736x/06/ad/da/06adda610b5c8af46f61afa7779760a0.jpg"
                     ]
                 };
+            },
+            methods: {
+                addComment() {
+                    if (this.newComment.name && this.newComment.message) {
+                        this.comments.push({
+                            name: this.newComment.name,
+                            message: this.newComment.message
+                        });
+                        this.newComment.name = '';
+                        this.newComment.message = '';
+                    }
+                }
             }
         }).mount('#app');
     </script>
