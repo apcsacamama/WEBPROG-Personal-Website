@@ -11,88 +11,141 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>My Personal Profile Webpage</h1>
-        </header>
+    <div id="app">
+        <div class="container">
+            <header class="header">
+                <h1>My Personal Profile Webpage</h1>
+            </header>
 
-        <nav class="nav">
-            <a href="#about">About Me</a>
-            <a href="#education">Education</a>
-            <a href="#course">Course</a>
-            <a href="#experience">IT Experience</a>
-            <a href="#hobbies">Hobbies</a>
-            <a href="#goals">Goals</a>
-        </nav>
+            <nav class="nav">
+                <a href="#about">About Me</a>
+                <a href="#education">Education</a>
+                <a href="#course">Course</a>
+                <a href="#experience">IT Experience</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#goals">Goals</a>
+            </nav>
 
-        <main class="main">
-            <section class="main-content">
-                <div id="about" class="about">
-                    <h2>About Me</h2>
-                    <p>Hello! My name is Shanteiy A. Camama, but you can also call me Shan. I am currently in 2nd year of college, and here are some of the things about me.</p>
-                </div>
-
-                <div id="education" class="education">
-                    <h2>Education / Achievements</h2>
-                    <ul>
-                        <li>2022-2023: 1st Place in MathemArtists Art Making Competition, Grade 12 with honors</li>
-                        <li>2023-2024: 1st-year Honor student</li>
-                    </ul>
-                </div>
-
-                <div id="course" class="course">
-                    <h2>Course</h2>
-                    <p>Bachelor of Science in Computer Science Specializing in Software Systems.</p>
-                </div>
-
-                <div id="experience" class="it-experience">
-                    <h2>IT Experience</h2>
-                    <p>I have worked on various IT projects, including:</p>
-                    <ul>
-                        <li>Front-end and Back-end programming</li>
-                        <li>Database management</li>
-                    </ul>
-                </div>
-
-                <div id="hobbies" class="hobbies">
-                    <h2>Hobbies & Interests</h2>
-                    <ul>
-                        <li>Reading manhwas and manga</li>
-                        <li>Playing instruments like the ukulele and keyboard</li>
-                        <li>Volleyball</li>
-                        <li>Traveling</li>
-                    </ul>
-                </div>
-
-                <div id="goals" class="goals">
-                    <h2>Goals in Life / Dream</h2>
-                    <p>My dream is to become a successful software developer like my sister and be able to travel around the world once I'm financially stable.</p>
-                </div>
-                <div class="button-container">
-                    <button class="button" onclick="redirectToSocials()">My Socials</button>
-                </div>
-            </section>
-
-            <aside class="sidebar">
-                <h2>Picture Gallery</h2>
-                <p>Here are some pictures that represent me:</p>
-                <div id="gallery">
-                    <div v-for="image in images" :key="image" class="gallery-item">
-                        <img :src="image" alt="Gallery image" />
+            <main class="main">
+                <section class="main-content">
+                    <div id="about" class="about">
+                        <h2>About Me</h2>
+                        <p>Hello! My name is Shanteiy A. Camama, but you can also call me Shan. I am currently in 2nd year of college, and here are some of the things about me.</p>
                     </div>
-                </div>
-            </aside>
-        </main>
 
-        <footer class="footer">
-            <p>© 2025 Shanteiy A. Camama | <a href="#credits">Credits</a></p>
+                    <div id="education" class="education">
+                        <h2>Education / Achievements</h2>
+                        <ul>
+                            <li>2022-2023: 1st Place in MathemArtists Art Making Competition, Grade 12 with honors</li>
+                            <li>2023-2024: 1st-year Honor student</li>
+                        </ul>
+                    </div>
+
+                    <div id="course" class="course">
+                        <h2>Course</h2>
+                        <p>Bachelor of Science in Computer Science Specializing in Software Systems.</p>
+                    </div>
+
+                    <div id="experience" class="it-experience">
+                        <h2>IT Experience</h2>
+                        <p>I have worked on various IT projects, including:</p>
+                        <ul>
+                            <li>Front-end and Back-end programming</li>
+                            <li>Database management</li>
+                        </ul>
+                    </div>
+
+                    <div id="hobbies" class="hobbies">
+                        <h2>Hobbies & Interests</h2>
+                        <ul>
+                            <li>Reading manhwas and manga</li>
+                            <li>Playing instruments like the ukulele and keyboard</li>
+                            <li>Volleyball</li>
+                            <li>Traveling</li>
+                        </ul>
+                    </div>
+
+                    <div id="goals" class="goals">
+                        <h2>Goals in Life / Dream</h2>
+                        <p>My dream is to become a successful software developer like my sister and be able to travel around the world once I'm financially stable.</p>
+                    </div>
+
+                    <div id="comments-section" class="comments-section">
+                        <h2>Leave a Comment</h2>
+                        <form @submit.prevent="addComment">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" v-model="newComment.name" required>
+
+                            <label for="message">Message:</label>
+                            <textarea id="message" v-model="newComment.message" required></textarea>
+
+                            <button type="submit" class="button">Submit</button>
+                        </form>
+
+                        <div class="comments-list">
+                            <h2>Comments</h2>
+                            <div v-if="comments.length === 0">No comments yet. Be the first to comment!</div>
+                            <div v-for="(comment, index) in comments" :key="index" class="comment">
+                                <h3>{{ comment.name }}</h3>
+                                <p>{{ comment.message }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="sidebar">
+                    <h2>Picture Gallery</h2>
+                    <p>Here are some pictures that represent me:</p>
+                    <div id="gallery">
+                        <div v-for="image in images" :key="image" class="gallery-item">
+                            <img :src="image" alt="Gallery image" />
+                        </div>
+                    </div>
+                </aside>
+            </main>
+
+            <footer class="footer">
+                <p>© 2025 Shanteiy A. Camama | <a href="#credits">Credits</a></p>
+            </footer>
+
             <section id="credits" class="credits">
-            <h2>Credits</h2>
-            <p>Image sources: Pinterest.</p>
-        </section>
-        </footer>
-        
+                <h2>Credits</h2>
+                <p>Image sources: Pinterest. </p>
+            </section>
+        </div>
     </div>
-    <script src="js/myScript.js"></script>
+
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    newComment: {
+                        name: '',
+                        message: ''
+                    },
+                    comments: [],
+                    images: [
+                        'image1.jpg',
+                        'image2.jpg',
+                        'image3.jpg'
+                    ]
+                };
+            },
+            methods: {
+                addComment() {
+                    if (this.newComment.name && this.newComment.message) {
+                        this.comments.push({
+                            name: this.newComment.name,
+                            message: this.newComment.message
+                        });
+                        this.newComment.name = '';
+                        this.newComment.message = '';
+                    }
+                }
+            }
+        }).mount('#app');
+    </script>
 </body>
 </html>
