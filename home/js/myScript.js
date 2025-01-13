@@ -1,7 +1,3 @@
-function redirectToSocials() {
-    window.location.href = "https://frankie-socmeds.carrd.co/";
-}
-
 const { createApp } = Vue;
 
 createApp({
@@ -33,3 +29,8 @@ createApp({
         }
     }
 }).mount('#app');
+
+function redirectToSocials() {
+    window.location.href = "https://frankie-socmeds.carrd.co/";
+}
+
