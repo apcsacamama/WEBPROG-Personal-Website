@@ -124,7 +124,8 @@
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
   padding: 10px;
-  background-color: #F0F8FF;
+  background-color: #D6EAF8;
+  border-radius: 20px;
 }
 
 .sidebar #gallery img {
