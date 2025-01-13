@@ -1,3 +1,4 @@
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,24 +11,26 @@
   height: 100vh;
 }
 
+/* Header */
 .header {
-  background-color: #B3DFF2;
-  color: #4F6470;
+  background-color: #BEE7E9; /* Soft Pastel Blue */
+  color: #2C3E50; /* Dark Gray */
   padding: 20px;
   text-align: center;
   font-size: 1.8rem;
   font-weight: bold;
 }
 
+/* Navigation */
 .nav {
-  background-color: #A7CCE1;
+  background-color: #9AD3DE; /* Lighter Blue */
   display: flex;
   justify-content: center;
   padding: 10px 0;
 }
 
 .nav a {
-  color: #4F6470;
+  color: #2C3E50; /* Dark Gray */
   text-decoration: none;
   font-size: 1.2rem;
   margin: 0 15px;
@@ -35,10 +38,11 @@
 }
 
 .nav a:hover {
-  color: #91BBDB;
+  color: #58A4B0; /* Medium Blue */
   text-decoration: underline;
 }
 
+/* Main */
 .main {
   display: flex;
   flex-direction: row;
@@ -46,16 +50,80 @@
 
 .main-content {
   flex: 2;
-  background-color: #D6EAF8;
+  background-color: #D4F1F4; /* Soft Light Blue */
   padding: 20px;
-  margin: 0px;
+  border-left: 3px solid #BEE7E9;
+  border-right: 3px solid #BEE7E9;
+}
+
+.main-content > div {
+  margin-bottom: 20px;
+}
+
+.main-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2C3E50; /* Dark Gray */
+}
+
+.main-content p,
+.main-content ul {
+  font-size: 1rem;
+  color: #2C3E50; /* Dark Gray */
+  line-height: 1.6;
+}
+
+/* Buttons */
+.button {
+  background-color: #9AD3DE; /* Lighter Blue */
+  color: #2C3E50; /* Dark Gray */
+  display: inline-block;
+  font-family: "Times New Roman";
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #58A4B0; /* Medium Blue */
+  transform: scale(1.1);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 10px #9AD3DE; /* Lighter Blue */
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1;
+  background-color: #BEE7E9; /* Soft Pastel Blue */
+  padding: 20px;
+  border-left: 3px solid #9AD3DE; 
+  text-align: center;
+}
+
+.sidebar h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #2C3E50;
+}
+
+.sidebar p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #2C3E50;
 }
 
 .sidebar {
   flex: 1;
   background-color: #B8E1ED;
   padding: 20px;
-  margin: 0px;
+  margin: 10px;
   text-align: center;
 }
 
