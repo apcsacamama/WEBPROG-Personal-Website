@@ -193,13 +193,18 @@
   color: #4F6470;
 }
 
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto; 
+  height: 100vh;
+}
+
 .footer {
   background-color: #A7D5E8;
   color: #4F6470;
   text-align: center;
   padding: 15px;
   font-size: 0.9rem;
-  grid-row: 3;
 }
 
 @media (max-width: 768px) {
